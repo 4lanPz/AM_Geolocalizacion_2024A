@@ -1,4 +1,4 @@
-# CV usando Ionic
+# Ionic Geolocalización
 
 Hacer un página que permita ver la geolocalización actual del usuario y enviarlo a firebase storage utilizando Ionic, Visual Studio Code y Android Studio
 
@@ -282,6 +282,7 @@ Ahora ya con nuestra lógica podemos pasar a editar nuestro HTML para utilizar l
 </ion-content>
 ```
 Ahora cada vez que aplastemos nuestro botón nos mostrará la localización de nuestro equipo actual, en web puede llegar a dar un error y este nos dará una localización "emulada" de un lugar específico, para poder ver si funciona correctamente podemos ir a las herramientas del desarrollador y en sensores podemos cambiar la localización y al volver a presionar el bóton nos dará otra latitud y longitud.
+
 - 5 Ejecución
 Para poder probar nuestro proyecto y ver los cambios que hemos hecho a nuestro proyecto se debe ejecutar
 ```bash
