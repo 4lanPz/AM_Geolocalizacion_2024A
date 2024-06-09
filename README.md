@@ -42,7 +42,6 @@ Después de instalar los módulos del proyecto, es necesario instalar firebase a
 Para ello necesitamos ejecutar el siguiente comando
 ```bash
 npm install @angular/fire firebase@9.16.0 --legacy-peer-deps
-npm install @ionic-native/core --legacy-peer-deps
 npm install @ionic-native/native-geocoder --legacy-peer-deps
 ionic g page home
 ```
