@@ -4,16 +4,16 @@
 
 export const environment = {
   production: false,
-  firebaseConfig: {
-    apiKey: 'tus credenciales',
-    authDomain: 'tus credenciales',
-    databaseURL: 'tus credenciales',
-    projectId: 'tus credenciales',
-    storageBucket: 'tus credenciales',
-    messagingSenderId: 'tus credenciales',
-    appId: 'tus credenciales',
-    measurementId: 'tus credenciales',
-  },
+  firebaseConfig : {
+    apiKey: "tus credenciales",
+    authDomain: "tus credenciales",
+    databaseURL: "tus credenciales",
+    projectId: "tus credenciales",
+    storageBucket: "tus credenciales",
+    messagingSenderId: "tus credenciales",
+    appId: "tus credenciales",
+    measurementId: "tus credenciales"
+  }
 };
 
 /*

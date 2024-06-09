@@ -94,21 +94,14 @@ export class HomePage {
   uploadFileToStorage(filePath: string, fileContent: string) {
     // Convertir el contenido del archivo a un Blob
     const blob = new Blob([fileContent], { type: 'text/plain' });
-
-    // Referencia al archivo
     const fileRef = this.afStorage.ref(filePath);
-
-    // Subir el archivo con el Blob creado
     const task = this.afStorage.upload(filePath, blob);
-
-    // Manejar la respuesta de la subida del archivo
     task
       .snapshotChanges()
       .pipe(
         finalize(() => {
           // Obtener la URL de descarga del archivo
           fileRef.getDownloadURL().subscribe((url) => {
-            console.log('File available at', url);
           });
         })
       )
