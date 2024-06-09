@@ -2,6 +2,11 @@
 
 Hacer un página que permita ver la geolocalización actual del usuario y enviarlo a firebase storage utilizando Ionic, Visual Studio Code y Android Studio
 
+## Clonar
+```bash
+Git clone https://github.com/4lanPz/AM_Geolocalizacion_2024A
+```
+
 ## Pasos
 
 - 1 Pre requisitos
@@ -79,14 +84,12 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
-// geolocation and native-geocoder
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import {
   NativeGeocoder,
   NativeGeocoderResult,
   NativeGeocoderOptions,
 } from '@ionic-native/native-geocoder/ngx';
-
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -162,13 +165,11 @@ latitude: any = 0; //latitude
         console.log('Error getting location', error);
       });
   }
-
   // geocoder options
   nativeGeocoderOptions: NativeGeocoderOptions = {
     useLocale: true,
     maxResults: 5,
   };
-
   // get address using coordinates
   getAddress(lat: any, long: any) {
     this.nativeGeocoder
@@ -225,8 +226,8 @@ private afStorage: AngularFireStorage
       )
       .subscribe();
   }
-///// llamar funciones
 
+///// llamar funciones
 getCurrentCoordinates() {
     console.log('Getting current coordinates...');
     this.geolocation
@@ -264,7 +265,6 @@ Ahora ya con nuestra lógica podemos pasar a editar nuestro HTML para utilizar l
     <ion-button (click)="getCurrentCoordinates()" expand="block">
       Obtener localización
     </ion-button>
-
     <ion-list>
       <ion-list-header>
         <ion-label>Coordenadas obtenidas</ion-label>
@@ -315,4 +315,4 @@ proyecto en android
 
 
 ### Android
-Error por dependencias que ya no tienen soporte y posible cambio a las nuevas librerias "npm install @awesome-cordova-plugins" no existe un plugin que lo reemplace
+Error por dependencias, versiones incompatibles no permiten hacer build android
